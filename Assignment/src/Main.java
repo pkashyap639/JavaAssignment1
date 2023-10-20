@@ -34,6 +34,8 @@ public class Main {
             t[i] = new Traingle(new Point(x1,y1), new Point(x2,y2), new Point(x3,y3));
             System.out.println("Triangle "+(i+1)+" created successfully");
             t[i].DisplayVertices();
+            System.out.println("Perimeter of Triangle "+(i+1)+" is "+t[i].Perimeter());
+            System.out.println("");
         }
 
 

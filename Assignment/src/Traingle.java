@@ -12,13 +12,20 @@ public class Traingle {
     }
 
     // Get vertices
-    public Point getVertices1(){
+    private Point getVertices1(){
         return vertices1;
     }
-    public Point getVertices2(){
+    private Point getVertices2(){
         return vertices2;
     }
-    public Point getVertices3(){
+    private Point getVertices3(){
         return vertices3;
+    }
+
+    // Display Vertices
+    public void DisplayVertices(){
+        System.out.println("Vertices 1: ("+getVertices1().getX()+","+getVertices1().getY()+")");
+        System.out.println("Vertices 2: ("+getVertices2().getX()+","+getVertices2().getY()+")");
+        System.out.println("Vertices 3: ("+getVertices3().getX()+","+getVertices3().getY()+")");
     }
 }

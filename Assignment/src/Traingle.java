@@ -39,7 +39,7 @@ public class Traingle {
 
         return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
     }
-
+    // get distance of side 2
     private double distance2(){
         double x2 = getVertices2().getX();
         double y2 = getVertices2().getY();
@@ -49,7 +49,7 @@ public class Traingle {
 
         return Math.sqrt(Math.pow((x3-x2),2)+Math.pow((y3-y2),2));
     }
-
+    // get distance of side 3
     private double distance3(){
         double x1 = getVertices1().getX();
         double y1 = getVertices1().getY();
@@ -64,5 +64,19 @@ public class Traingle {
     public double Perimeter(){
 
         return distance1()+distance2()+distance3();
+    }
+
+    // check if isosceles
+    public boolean isosceles(){
+        if(distance1() == distance2()){
+            return true;
+        }
+        else if(distance2() == distance3()){
+            return true;
+        }
+        else if(distance1() == distance3()){
+            return true;
+        }
+        return false;
     }
 }

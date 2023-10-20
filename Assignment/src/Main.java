@@ -33,9 +33,19 @@ public class Main {
             // making triangle
             t[i] = new Traingle(new Point(x1,y1), new Point(x2,y2), new Point(x3,y3));
             System.out.println("Triangle "+(i+1)+" created successfully");
+            // Display Vertices
             t[i].DisplayVertices();
+            // Display Perimeter
             System.out.println("Perimeter of Triangle "+(i+1)+" is "+t[i].Perimeter());
+
+            // Display isosceles
+            if(t[i].isosceles()){
+                System.out.println("Triangle "+(i+1)+" is isosceles");
+            }else{
+                System.out.println("Triangle "+(i+1)+" is not isosceles");
+            }
             System.out.println("");
+
         }
 
 

@@ -28,4 +28,41 @@ public class Traingle {
         System.out.println("Vertices 2: ("+getVertices2().getX()+","+getVertices2().getY()+")");
         System.out.println("Vertices 3: ("+getVertices3().getX()+","+getVertices3().getY()+")");
     }
+
+    // get distance of side 1
+    private double distance1(){
+        double x1 = getVertices1().getX();
+        double y1 = getVertices1().getY();
+
+        double x2 = getVertices2().getX();
+        double y2 = getVertices2().getY();
+
+        return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+    }
+
+    private double distance2(){
+        double x2 = getVertices2().getX();
+        double y2 = getVertices2().getY();
+
+        double x3 = getVertices3().getX();
+        double y3 = getVertices3().getY();
+
+        return Math.sqrt(Math.pow((x3-x2),2)+Math.pow((y3-y2),2));
+    }
+
+    private double distance3(){
+        double x1 = getVertices1().getX();
+        double y1 = getVertices1().getY();
+
+        double x3 = getVertices3().getX();
+        double y3 = getVertices3().getY();
+
+        return Math.sqrt(Math.pow((x1-x3),2)+Math.pow((y1-y3),2));
+    }
+    // Finding Perimeter
+    // Formula:  sum of each side
+    public double Perimeter(){
+
+        return distance1()+distance2()+distance3();
+    }
 }

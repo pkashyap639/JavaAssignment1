@@ -1,3 +1,6 @@
+
+// Author: Piyush Kant
+// Id: c0893688
 public class Point {
     // Variables for point x and y
     private double x;

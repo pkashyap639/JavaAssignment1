@@ -79,4 +79,74 @@ public class Traingle {
         }
         return false;
     }
+
+    // Big X
+    public double BigX(){
+        double x1 = getVertices1().getX();
+        double x2 = getVertices2().getX();
+        double x3 = getVertices3().getX();
+
+        if(x1>x2 && x1>x3){
+            return x1;
+        }
+        else if(x2>x1 && x2>x3){
+            return x2;
+        }
+        return x3;
+    }
+    // Small X
+    public double SmallX(){
+        double x1 = getVertices1().getX();
+        double x2 = getVertices2().getX();
+        double x3 = getVertices3().getX();
+
+        if(x1<x2 && x1<x3){
+            return x1;
+        }
+        else if(x2<x1 && x2<x3){
+            return x2;
+        }
+        return x3;
+    }
+
+    // Big Y
+    public double BigY(){
+        double y1 = getVertices1().getY();
+        double y2 = getVertices2().getY();
+        double y3 = getVertices3().getY();
+
+        if(y1>y2 && y1>y3){
+            return y1;
+        }
+        else if(y2>y1 && y2>y3){
+            return y2;
+        }
+        return y1;
+    }
+
+    // Small y
+    public double SmallY(){
+        double y1 = getVertices1().getY();
+        double y2 = getVertices2().getY();
+        double y3 = getVertices3().getY();
+
+        if(y1<y2 && y1<y3){
+            return y1;
+        }
+        else if(y2<y1 && y2<y3){
+            return y2;
+        }
+        return y1;
+    }
+
+    public boolean checkInside(double p1, double p2){
+        double smallX = SmallX();
+        double smallY = SmallY();
+        double bigX = BigX();
+        double bigY = BigY();
+        if((p1>=smallX && p1<=bigX) && (p2>=smallY && p2>=bigY)){
+            return true;
+        }
+        return false;
+    }
 }

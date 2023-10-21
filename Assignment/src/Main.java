@@ -46,6 +46,18 @@ public class Main {
             }
             System.out.println("");
 
+            // Enter Point to check if lie inside triangle
+            System.out.print("Enter vertices of a point to check if lie inside triangle: ");
+            System.out.print("Enter x: ");
+            double p1 = s.nextDouble();
+            System.out.print("Enter y: ");
+            double p2 = s.nextDouble();
+            if(t[i].checkInside(p1,p2)){
+                System.out.println("This point lie inside triangle: "+(i+1));
+            }else{
+                System.out.println("This point does not lie inside triangle: "+(i+1));
+            }
+            System.out.println("");
         }
 
 

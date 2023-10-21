@@ -1,3 +1,5 @@
+// Author: Piyush Kant
+// Id: c0893688
 public class Traingle {
     // Three Vertices of triangle of type point
     private Point vertices1;
